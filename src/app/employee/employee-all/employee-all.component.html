@@ -1,0 +1,32 @@
+
+<div class="container ">
+    <div class="cards">
+        <div class="card " *ngFor="let item of data" [routerLink]="['/employees/',item.id]" >
+
+            <div class="row">
+                <div class="col-5">
+                    <ng-container *ngIf="item.employee_age>30; else elseTemplate">
+                        <img class="mb-2"
+
+                        src="https://images.unsplash.com/photo-1552641156-93ea2a5f78e2?ixlib=rb-1
+                        .2.1&ixid=MnwxMjA3fDB8MHxwaG90by" alt="">
+                    </ng-container>
+                    <ng-template #elseTemplate>
+                        <img class="mb-2"
+                        src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=
+                        rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG9" alt="">
+                    </ng-template>
+                </div>
+                <div class="col-7">
+                    <h6 class="mt-2 ">{{item.employee_name|titlecase}} <span class="float-end">  ID-{{item.id}}</span></h6>
+                    <p>Age:{{item.employee_age}}</p>
+                    <p>Salary:{{
+                        item.employee_salary
+                    }}</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>

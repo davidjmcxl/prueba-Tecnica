@@ -1,0 +1,18 @@
+<div *ngIf="data" class="card text-center" style="width: 18rem;">
+    <ng-container *ngIf="data.employee_age>30; else elseTemplate">
+      <img
+      width="400"
+      src="https://images.unsplash.com/photo-1552641156-93ea2a5f78e2?ixlib=rb-1
+      .2.1&ixid=MnwxMjA3fDB8MHxwaG90by" >
+  </ng-container>
+  <ng-template #elseTemplate>
+      <img
+      src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=
+      rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG9" >
+  </ng-template>
+    <div class="card-body ">
+      <h5 class="card-title">{{data.employee_name|titlecase}}</h5>
+      <p class="card-text"><b>Salary:</b> {{data.employee_salary}}</p>
+      <p class="card-text"><b>Age:</b> {{data.employee_age}}</p>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<!-- <nav><ul class="nav  nav-pills nav-fill">
+    <li *ngFor="let item of menu"
+        class="list-group-item"
+        [routerLink]="[ item.ruta ]"
+        routerLinkActive="active">
+       {{ item.texto }}
+    </li>
+
+</ul></nav>
+ -->
+
+  <div class="contenedor">
+    <ul>
+        <li  *ngFor="let item of menu"
+        class="list-group-item active"
+        [routerLink]="[ item.ruta ]"
+        routerLinkActive="active"> {{ item.texto }}
+
+        </li>
+    </ul>
+</div>
